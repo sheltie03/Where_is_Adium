@@ -1,0 +1,9 @@
+<?php
+   if ($_COOKIE["OR-session"] == "Ad1um_h@5_m@g1c_numb3r_647392943843") {
+   $url = "http://" . $_SERVER["HTTP_HOST"] . "/golden/cookie/";
+   header('Location: ' . $url, true , 302);
+   } else {
+   $url = "http://" .  $_SERVER["HTTP_HOST"] . "/advise02.html";
+   header('Location: ' . $url, true , 302);
+   }
+?>

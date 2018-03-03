@@ -1,0 +1,9 @@
+<?php
+   if ($_COOKIE["OR-session"] == "Hey_Adium-san_C00kie_w@s_burnt!!") {
+   $url = "http://oskrjvusdkesnvjurjsakfvjekdkf.web.fc2.com/room/";
+   header('Location: ' . $url, true , 302);
+   } else {
+   $url = "http://" .  $_SERVER["HTTP_HOST"] . "/advise01.html";
+   header('Location: ' . $url, true , 302);
+   }
+?>

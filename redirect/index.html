@@ -1,0 +1,9 @@
+<?php
+   if (!isset($_COOKIE["OR-session"])) {
+   $url = 'http://' . $_SERVER["HTTP_HOST"];
+   header('Location: ' . $url, true , 302);
+   } else {
+   $url = $_COOKIE["OR-session"];
+   header('Location: ' . $url, true , 302);
+   }
+?>
