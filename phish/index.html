@@ -1,5 +1,12 @@
 <?php
+if (isset($_COOKIE["OR-session"])) {
+setcookie("OR-session", "", time()-1, "/");
 setcookie("phishing-session", "flag{50m3b0dy_c@u9ht_s0m3wh3r3_by_ph1sh1ng}", time()+10, "/");
+} else {
+setcookie("phishing-session", "Set cookie if you want a flag.", time()+10, "/");
+}
+
+
 ?>
 <html>
 <style type="text/css">
