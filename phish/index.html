@@ -1,0 +1,198 @@
+<?php
+setcookie("phishing-session", "flag{50m3b0dy_c@u9ht_s0m3wh3r3_by_ph1sh1ng}", time()+10, "/");
+?>
+<html>
+<style type="text/css">
+h2{
+    position: relative;
+    margin: 0.5em 0 0.5em;
+    padding: 0.8em 0 0.8em 1.5em;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+h2:before{
+    content: "";
+    position: absolute;
+    background: #FFA07A;
+    top: 50%;
+    left: 0.5em;
+    margin-top :-15px;
+    height: 30px;
+    width: 8px;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+}
+
+h3{
+    position: relative;
+    margin: 0.5em 0 0.5em;
+    padding: 0.8em 0 0.8em 1.5em;
+    font-size: 1.143em;
+    font-weight: bold;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h3:before{
+    content: "";
+    position: absolute;
+    background: #B92A2C;
+    top: 50%;
+    left: 0.5em;
+    margin-top :-15px;
+    height: 28px;
+    width: 8px;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+}
+
+.outside{
+  margin: 80px;
+}
+
+.firstMsg{
+  border-style: solid;
+  border-width: 1px;
+  border-color: #FA8072;
+  background-color: #FAEBD7;
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0em 0 0.8em 1.5em;
+}
+
+.secondMsg{
+  border-style: solid;
+  border-width: 0px;
+  width: 35em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.lastMsg{
+  border-style: solid;
+  border-width: 1px;
+  border-style: none;
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0em 0 0.8em 1.5em;
+}
+
+.title{
+  font-weight: bold;
+  font-size: 18px;
+}
+
+input#submit_button {
+    border-radius: 5%;
+    padding: 10px 30px;
+    font-size: 1.0em;
+    background-color: #A0522D;
+    color: #fff;
+}
+
+input#submit_button:hover {
+  color         : #fff;
+  background    : #8B0000;
+  border-color: #A0522D;
+}
+
+ul.caution {
+	list-style-type: none;
+
+}
+
+ul.caution li:before {
+	content: '※ ';
+	margin-left:-1.0em;
+}
+
+.input_space {
+  color: #A9A9A9;
+  font-size:1.3em;
+  border: 3px solid;
+}
+input:focus {
+  color: #000000;
+  font-size:1.3em;
+  border: 3px solid;
+}
+</style>
+
+<title>〇〇銀行からのお願い</title>
+<div class="outside">
+<h1>〇〇銀行からのお願い</h1>
+
+
+<div class="firstMsg">
+<h3>インターネットバンキングの口座を不正に利用された恐れがあります</h3>
+<div class="secondMsg">
+現在、インターネットバンキングの不正利用の調査を早急に進めております。
+お客様のインターネットのログイン情報を、第三者が不正に使用した可能性があります。
+ただちにログインして、ログインIDとログインパスワードを変更してください。
+<span style="color:red">※ お問い合わせの前に必ず行ってください。</span>
+</div>
+</div>
+
+
+<h2>ログイン情報の変更</h2>
+
+<div class="firstMsg">
+<h3 class="title">パスワードを変更してください</h3>
+<div class="secondMsg">
+<form action="" method="post" accept-charset="utf-8">
+<table width="500">
+<tr>
+<td><span style="font-size:1.3em">ログインID</span><br><span style="font-size:12px">（半角英数字6〜12桁入力）</span></td>
+<td><input type="text" class="input_space" name="login_id" value=""></td>
+</tr>
+<tr>
+<td><span style="font-size:1.3em">ログインパスワード</span><br><span style="font-size:12px">（半角英数字6〜12桁入力）</span></td>
+<td><input type="text" class="input_space" name="login_pass" value=""></td>
+</tr>
+<tr>
+<td></td>
+<td><input id="submit_button" type="submit" value="ログイン"></td>
+</tr>
+</table>
+</form>
+</div>
+</div>
+
+
+<h2>お問い合わせに関して</h2>
+
+<div class="lastMsg">
+現在、お問い合わせへの電話回線が大変混雑しており、繋がりにくい状態が続いております。
+ご利用のお客さまにはご迷惑とご不便をおかけしておりますことを深くお詫び申し上げます。
+当行では、チャットサイトでのお問い合わせのご対応を行っておりますので、お問い合わせは下記のURL
+よりチャットをご利用いただくようお願い申し上げます。
+
+http://www.example.com/chat/
+
+<ul class="caution">
+<li>ブラウザのボタン（「進む」「戻る」「中止」等）は使用しないでください。</li>
+<li>入力項目の移動は「enter」キーを使用しないでください。（「tab」または「左クリック」を使用してください。）</li>
+</ul>
+</div>
+</div>
+
+<?php
+if ($_POST["login_id"] && $_POST["login_pass"]) {
+echo '<script type="text/javascript">
+  alert("残念ですが、フィッシングサイトでした。");
+</script>';
+} else {
+  if (isset($_COOKIE["phishing-session"])) {
+    echo '<script type="text/javascript">
+      alert("もう一度、入力してください。");
+    </script>';
+}
+}
+?>
+</html>

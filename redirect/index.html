@@ -3,7 +3,7 @@
    $url = 'http://' . $_SERVER["HTTP_HOST"];
    header('Location: ' . $url, true , 302);
    } else {
-   $url = $_COOKIE["OR-session"];
+   $url = $_COOKIE["OR-session"] . $_GET["path"];
    header('Location: ' . $url, true , 302);
    }
 ?>
