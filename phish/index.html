@@ -3,7 +3,7 @@ if (isset($_COOKIE["OR-session"])) {
 setcookie("OR-session", "", time()-1, "/");
 setcookie("phishing-session", "flag{50m3b0dy_c@u9ht_s0m3wh3r3_by_ph1sh1ng}", time()+10, "/");
 } else {
-setcookie("phishing-session", "Set cookie if you want a flag.", time()+10, "/");
+setcookie("phishing-session", "Set cookie if you want a correct flag.", time()+10, "/");
 }
 
 
@@ -160,7 +160,7 @@ input:focus {
 </tr>
 <tr>
 <td><span style="font-size:1.3em">ログインパスワード</span><br><span style="font-size:12px">（半角英数字6〜12桁入力）</span></td>
-<td><input type="text" class="input_space" name="login_pass" value=""></td>
+<td><input type="password" class="input_space" name="login_pass" value=""></td>
 </tr>
 <tr>
 <td></td>
